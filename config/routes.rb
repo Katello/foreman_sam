@@ -1,6 +1,6 @@
-Headpin::Engine.routes.draw do
+SAM::Engine.routes.draw do
 
-  match '/:headpin_page/(*path)', :to => "headpin#index"
-  match '/headpin/(*path)', :to => "headpin#index_ie"
+  match '/:sam_page/(*path)', :to => "sam#index"
+  match '/sam/(*path)', :to => "sam#index_ie"
 
 end
