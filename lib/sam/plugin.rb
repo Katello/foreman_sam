@@ -10,6 +10,9 @@ Foreman::Plugin.register :sam do
   delete_menu_item :top_menu, :environments
   delete_menu_item :top_menu, :gpg_keys
 
+  delete_menu_item :top_menu, :containers
+  delete_menu_item :top_menu, :new_container
+
   delete_menu_item :top_menu, :hosts
   delete_menu_item :top_menu, :newhost
   delete_menu_item :top_menu, :operatingsystems
