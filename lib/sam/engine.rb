@@ -8,7 +8,7 @@ module SAM
 
     initializer "sam.paths" do |app|
       app.routes_reloader.paths.unshift("#{SAM::Engine.root}/config/routes/api/sam.rb")
-      app.routes_reloader.paths.unshift("#{SAM::Engine.root}/config/overrides.rb")
+      app.routes_reloader.paths.unshift("#{SAM::Engine.root}/config/routes/overrides.rb")
     end
 
     config.to_prepare do
