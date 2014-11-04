@@ -1,0 +1,21 @@
+
+<% if User.current.allowed_to?(:view_users) %>
+  <div class="form-group row">
+    <ul class="nav nav-tabs" data-tabs="tabs">
+
+    <div class="tab-content">
+      <% if User.current.allowed_to?(:view_users) %>
+        <div class="tab-pane active" id="users">
+          <%= checkbox_f(f, :ignore_types, {:label => _("All users"), :multiple => true, :onchange => 'ignore_checked(this)'}, "User") %>
+          <%= multiple_selects f, :users, User.except_admin, taxonomy.selected_or_inherited_ids[:user_ids],
+                               {:disabled => taxonomy.used_and_selected_or_inherited_ids[:user_ids], :label => _('Select users')},
+                               {'data-mismatches' => taxonomy.need_to_be_selected_ids[:user_ids].to_json,
+                                'data-inheriteds' => taxonomy.inherited_ids[:user_ids].to_json,
+                                'data-useds' => taxonomy.used_ids[:user_ids].to_json } %>
+        </div>
+      <% end %>
+
+    </div>
+    <%= submit_or_cancel f %>
+  </div>
+<% end %>

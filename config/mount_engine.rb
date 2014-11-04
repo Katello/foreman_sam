@@ -1,3 +1,3 @@
 Foreman::Application.routes.draw do
-  mount Headpin::Engine, :at => '/', :as => 'headpin'
+  mount SAM::Engine, :at => '/', :as => 'sam'
 end

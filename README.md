@@ -1,4 +1,4 @@
-headpin-plugin
+sam-plugin
 ====================
 
-Katello plug to convert app to headpin
+Katello plug to convert app to SAM

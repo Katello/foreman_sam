@@ -1,7 +1,7 @@
 Foreman::Application.routes.draw do
 
-  scope :headpin, :module => :headpin do
-    match '/headpin' => 'headpin#plugin', :via => :get
+  scope :sam, :module => :sam do
+    match '/sam' => 'sam#plugin', :via => :get
   end
 
 end

@@ -1,4 +1,4 @@
-module Headpin
+module SAM
   module ApplicationHelper
   end
 end
