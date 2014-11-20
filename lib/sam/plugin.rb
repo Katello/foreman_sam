@@ -7,6 +7,7 @@ Foreman::Plugin.register :sam do
   delete_menu_item :top_menu, :statistics
   delete_menu_item :top_menu, :trends
 
+  delete_menu_item :top_menu, :content_views
   delete_menu_item :top_menu, :environments
   delete_menu_item :top_menu, :gpg_keys
 
