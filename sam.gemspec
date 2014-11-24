@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = SAM::VERSION
   s.authors     = ["Red Hat"]
   s.email       = ["foreman-dev@googlegroups.com"]
-  s.homepage    = "http://theforeman.org"
+  s.homepage    = "http://katello.org"
   s.summary     = "Katello SAM UI"
   s.description = "Katello SAM UI"
 
