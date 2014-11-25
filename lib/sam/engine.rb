@@ -13,6 +13,7 @@ module SAM
 
     config.to_prepare do
       #::Api::V2::<EXAMPLE>Controller.send :include, SAM::Concerns::<EXAMPLE>ControllerExtensions
+      ::SettingsController.send :include, SAM::Concerns::SettingsControllerExtensions
     end
 
     initializer 'sam.register_plugin', :after => :finisher_hook do
