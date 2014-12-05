@@ -19,25 +19,29 @@ module SAM
         def index
           all_settings = Setting.live_descendants.search_for(params[:search])
           @settings = []
-          @settings += all_settings.where(:category => Setting::General, :name => :administrator)
-          @settings += all_settings.where(:category => Setting::General, :name => :authorize_login_delegation)
-          @settings += all_settings.where(:category => Setting::General, :name => :authorize_login_delegation_api)
-          @settings += all_settings.where(:category => Setting::General, :name => :db_pending_migration)
-          @settings += all_settings.where(:category => Setting::General, :name => :db_pending_seed)
-          @settings += all_settings.where(:category => Setting::General, :name => :email_reply_address)
-          @settings += all_settings.where(:category => Setting::General, :name => :entries_per_page)
-          @settings += all_settings.where(:category => Setting::General, :name => :fix_db_cache)
-          @settings += all_settings.where(:category => Setting::General, :name => :foreman_url)
-          @settings += all_settings.where(:category => Setting::General, :name => :idle_timeout)
-          @settings += all_settings.where(:category => Setting::General, :name => :send_welcome_email)
-          @settings += all_settings.where(:category => Setting::General, :name => :use_gravatar)
+          [:administrator,
+           :authorize_login_delegation,
+           :authorize_login_delegation_api,
+           :db_pending_migration,
+           :db_pending_seed,
+           :email_reply_address,
+           :entries_per_page,
+           :fix_db_cache,
+           :foreman_url,
+           :idle_timeout,
+           :send_welcome_email,
+           :use_gravatar].each do |setting|
+            @settings += all_settings.where(:category => Setting::General, :name => setting)
+          end
 
-          @settings += all_settings.where(:category => Setting::Auth, :name => :authorize_login_delegation_auth_source_user_autocreate)
-          @settings += all_settings.where(:category => Setting::Auth, :name => :login_delegation_logout_url)
-          @settings += all_settings.where(:category => Setting::Auth, :name => :oauth_active)
-          @settings += all_settings.where(:category => Setting::Auth, :name => :oauth_consumer_key)
-          @settings += all_settings.where(:category => Setting::Auth, :name => :oauth_consumer_secret)
-          @settings += all_settings.where(:category => Setting::Auth, :name => :oauth_map_users)
+          [:authorize_login_delegation_auth_source_user_autocreate,
+           :login_delegation_logout_url,
+           :oauth_active,
+           :oauth_consumer_key,
+           :oauth_consumer_secret,
+           :oauth_map_users].each do |setting|
+            @settings += all_settings.where(:category => Setting::Auth, :name => setting)
+          end
 
           @settings += all_settings.where(:category => Setting::ForemanTasks, :name => :dynflow_console_require_auth)
           @settings += all_settings.where(:category => Setting::ForemanTasks, :name => :dynflow_enable_console)
@@ -48,4 +52,3 @@ module SAM
     end
   end
 end
-
