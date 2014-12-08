@@ -1,4 +1,4 @@
-sam-plugin
+foreman-sam
 ====================
 
-Katello plug to convert app to SAM
+Katello engine to convert app to SAM

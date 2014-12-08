@@ -1,2 +1,0 @@
-require 'sam/plugin.rb'
-

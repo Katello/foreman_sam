@@ -1,7 +1,7 @@
 Foreman::Application.routes.draw do
 
-  scope :sam, :module => :sam do
-    match '/sam' => 'sam#plugin', :via => :get
+  scope :foreman_sam, :module => :foreman_sam do
+    match '/sam' => 'foreman_sam#plugin', :via => :get
   end
 
 end
