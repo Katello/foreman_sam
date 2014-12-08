@@ -1,4 +1,4 @@
-Foreman::Plugin.register :sam do
+Foreman::Plugin.register :foreman_sam do
   requires_foreman '> 1.6'
 
   delete_menu_item :top_menu, :dashboard

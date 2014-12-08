@@ -1,3 +1,3 @@
 Foreman::Application.routes.draw do
-  mount SAM::Engine, :at => '/', :as => 'sam'
+  mount ForemanSAM::Engine, :at => '/', :as => 'sam'
 end
