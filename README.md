@@ -1,4 +1,4 @@
-sam-plugin
+foreman_sam
 ====================
 [![Build Status](https://travis-ci.org/Katello/sam-plugin.svg)](https://travis-ci.org/Katello/sam-plugin)
 
