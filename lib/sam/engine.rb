@@ -6,7 +6,7 @@ module SAM
       app.routes_reloader.paths << "#{SAM::Engine.root}/config/mount_engine.rb"
     end
 
-    initializer "sam.paths" do |app|
+    initializer 'sam.paths' do |app|
       app.routes_reloader.paths.unshift("#{SAM::Engine.root}/config/routes/api/sam.rb")
       app.routes_reloader.paths.unshift("#{SAM::Engine.root}/config/routes/overrides.rb")
     end
@@ -20,6 +20,5 @@ module SAM
       require 'sam/plugin'
       require 'sam/permissions'
     end
-
   end
 end

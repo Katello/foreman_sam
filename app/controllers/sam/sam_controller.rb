@@ -1,8 +1,7 @@
-require_dependency "sam/application_controller"
+require_dependency 'sam/application_controller'
 
 module SAM
   class SAMController < SAM::ApplicationController
-
     before_filter :authorize
 
     def index

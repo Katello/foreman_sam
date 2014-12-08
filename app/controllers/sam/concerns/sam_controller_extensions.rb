@@ -12,7 +12,5 @@
 
 module SAM
   module Concerns
-
   end
 end
-

@@ -1,0 +1,72 @@
+AllCops:
+  RunRailsCops: true # automatically run rails cops
+#   Include:
+#     - app/views/**/*.rabl
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Description: 'Avoid methods longer than 30 lines of code.'
+  Max: 30
+
+Rails/ActionFilter:
+  Enabled: false # Rails 4.0 check
+
+Rails/ScopeArgs:
+  Enabled: false # don't force usage of lambdas for scopes
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Style/Documentation:
+  Enabled: false # don't require documentation
+
+Style/DotPosition:
+  EnforcedStyle: trailing
+
+Style/EachWithObject:
+  Enabled: false # people can use inject
+
+Style/Encoding:
+  Enabled: false # don't require utf-8 encoding on every file
+
+Style/FileName:
+  Exclude: ['script/**'] # scripts are hyphened case
+
+Style/FormatString:
+  Enabled: false # we use % for i18n
+
+Style/GuardClause:
+  Enabled: false # don't enforce this
+
+Style/HashSyntax:
+  EnforcedStyle: hash_rockets
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false # don't require -> for single line lambdas
+
+Style/MethodCalledOnDoEndBlock:
+  Enabled: true
+
+Style/Next:
+  Enabled: false # don't enforce next in loops over if/unless
+
+Style/RescueModifier:
+  Enabled: false
+
+Style/SingleLineBlockParams:
+  Enabled: false
+
+Style/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: space
+
+Style/SymbolProc:
+  Enabled: false # don't force usage of symbol procs
+
+Style/WordArray:
+  Enabled: false # don't force usage of %w()
+
