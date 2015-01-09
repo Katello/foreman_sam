@@ -1,0 +1,4 @@
+:features:
+  :custom_products: false
+  :remote_actions: false
+  :lifecycle_environments: false

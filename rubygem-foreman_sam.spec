@@ -68,6 +68,8 @@ mkdir -p %{buildroot}%{gemdir}
 cp -pa .%{gemdir}/* \
         %{buildroot}%{gemdir}/
 
+mkdir -p %{buildroot}/%{_sysconfdir}/foreman/settings.plugins.d/
+cp -dpR .%{geminstdir}/config/foreman-sam-plugin.yaml %{buildroot}/%{_sysconfdir}/foreman/settings.plugins.d/sam-plugin.yaml
 
 %files
 %dir %{geminstdir}
