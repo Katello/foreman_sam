@@ -13,6 +13,7 @@ Foreman::Plugin.register :foreman_sam do
 
   delete_menu_item :top_menu, :containers
   delete_menu_item :top_menu, :new_container
+  delete_menu_item :top_menu, :registries
 
   delete_menu_item :top_menu, :hosts
   delete_menu_item :top_menu, :newhost
