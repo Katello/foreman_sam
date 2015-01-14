@@ -19,5 +19,11 @@ module ForemanSAM
       require 'foreman_sam/plugin'
       require 'foreman_sam/permissions'
     end
+
+    rake_tasks do
+      Rake::Task['db:seed'].enhance do
+        ForemanSAM::Engine.load_seed
+      end
+    end
   end
 end
