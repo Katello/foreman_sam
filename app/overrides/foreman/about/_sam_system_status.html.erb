@@ -1,0 +1,32 @@
+<div class="col-md-7">
+  <div class="stats-well">
+    <h4><%=_("System Status")%></h4>
+    <ul class="nav nav-tabs" data-tabs="tabs">
+      <li><a href="#plugins" data-toggle="tab"><%= _('Plugins') %></a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="plugins">
+        <% if @plugins.empty? %>
+        <p class="ca"><%= _("No plugins found") %></p>
+        <% else %>
+        <table class="table table-striped">
+          <tr>
+            <th><%= _("Name") %></th>
+            <th><%= _("Description") %></th>
+            <th><%= _("Author") %></th>
+            <th><%= _("Version") %></th>
+          </tr>
+          <% @plugins.each do |plugin| %>
+          <tr>
+            <td><%= plugin.url.blank? ? plugin.name : link_to(plugin.name, plugin.url, :rel=>'external')%></td>
+            <td><%= _(plugin.description) %></td>
+            <td><%= plugin.author_url.blank? ? plugin.author : link_to(plugin.author, plugin.author_url)%></td>
+            <td><%= plugin.version %></td>
+          </tr>
+          <% end %>
+        </table>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

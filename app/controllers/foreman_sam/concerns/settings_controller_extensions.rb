@@ -27,7 +27,6 @@ module ForemanSAM
            :email_reply_address,
            :entries_per_page,
            :fix_db_cache,
-           :foreman_url,
            :idle_timeout,
            :send_welcome_email,
            :use_gravatar].each do |setting|

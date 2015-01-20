@@ -12,7 +12,7 @@ module ForemanSAM
     end
 
     config.to_prepare do
-      ::SettingsController.send :include, ForemanSAM::Concerns::SettingsControllerExtensions
+      ::SettingsController.send :include, ForemanSAM::Concerns::SettingsControllerExtensions unless Foreman.in_rake?
     end
 
     initializer 'foreman_sam.register_plugin', :after => :finisher_hook do
