@@ -13,4 +13,40 @@
 Foreman::Application.routes.draw do
   root :to => 'katello/dashboard#index'
   match '/dashboard', :to => 'katello/dashboard#index'
+
+  # foreman
+  match 'architectures(/*post)', :to => proc { [404, {}, ['']] }
+  match '*all/architectures(/*all)', :to => proc { [404, {}, ['']] }
+  match 'bookmarks(/*post)', :to => proc { [404, {}, ['']] }
+  match '*pre/bookmarks(/*post)', :to => proc { [404, {}, ['']] }
+  match 'compute_profiles(/*post)', :to => proc { [404, {}, ['']] }
+  match '*pre/compute_profiles(/*post)', :to => proc { [404, {}, ['']] }
+  match 'config_templates(/*post)', :to => proc { [404, {}, ['']] }
+  match '*pre/config_templates(/*post)', :to => proc { [404, {}, ['']] }
+  match 'domains(/*post)', :to => proc { [404, {}, ['']] }
+  match '*pre/domains(/*post)', :to => proc { [404, {}, ['']] }
+  match 'hostgroups(/*post)', :to => proc { [404, {}, ['']] }
+  match '*pre/hostgroups(/*post)', :to => proc { [404, {}, ['']] }
+  match 'hosts(/*post)', :to => proc { [404, {}, ['']] }
+  match '*pre/hosts(/*post)', :to => proc { [404, {}, ['']] }
+  match 'media(/*post)', :to => proc { [404, {}, ['']] }
+  match '*pre/media(/*post)', :to => proc { [404, {}, ['']] }
+  match 'operatingsystems(/*post)', :to => proc { [404, {}, ['']] }
+  match '*pre/operatingsystems(/*post)', :to => proc { [404, {}, ['']] }
+  match 'ptables(/*post)', :to => proc { [404, {}, ['']] }
+  match '*pre/ptables(/*post)', :to => proc { [404, {}, ['']] }
+  match 'smart_proxies(/*post)', :to => proc { [404, {}, ['']] }
+  match '*pre/smart_proxies(/*post)', :to => proc { [404, {}, ['']] }
+  match 'smart_variables(/*post)', :to => proc { [404, {}, ['']] }
+  match '*pre/smart_variables(/*post)', :to => proc { [404, {}, ['']] }
+  match 'subnets(/*post)', :to => proc { [404, {}, ['']] }
+  match '*pre/subnets(/*post)', :to => proc { [404, {}, ['']] }
+
+  # katello
+  match '*all/gpg_keys(/*all)', :to => proc { [404, {}, ['']] }
+  match '*all/products', :via => :post, :to => proc { [404, {}, ['']] }
+  match '*all/content_views', :via => :post, :to => proc { [404, {}, ['']] }
+  match '*all/content_views/*all', :via => :put, :to => proc { [404, {}, ['']] }
+  match '*all/environments', :via => :post, :to => proc { [404, {}, ['']] }
+  match '*all/environments/*all', :via => :put, :to => proc { [404, {}, ['']] }
 end
