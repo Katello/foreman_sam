@@ -26,8 +26,7 @@ Requires: %{?scl_prefix}ruby-wrapper
 BuildRequires: %{?scl_prefix}ruby-wrapper
 %endif
 
-Requires: foreman >= 1.7
-Requires: katello >= 2.0
+Requires: %{?scl_prefix}rubygem-katello
 Requires: %{?scl_prefix}rubygems
 BuildRequires: %{?scl_prefix}rubygems
 BuildRequires: %{?scl_prefix}rubygems-devel
